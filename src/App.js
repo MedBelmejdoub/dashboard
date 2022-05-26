@@ -79,7 +79,6 @@ const App = () => {
               <Route path="/bar" element={<Bar />}></Route>
               <Route path="/pie" element={<Pie />}></Route>
               <Route path="/financial" element={<Financial />}></Route>
-
               <Route path="/color-mappikng" element={<ColorMapping />}></Route>
               <Route path="/pyramid" element={<Pyramid />}></Route>
               <Route path="/stacked" element={<Stacked />}></Route>
