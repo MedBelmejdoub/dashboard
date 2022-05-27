@@ -5,9 +5,15 @@ const initialState = {
   cart: false,
   userProfile: false,
   notification: false,
-}
+};
 
 export const ContextProvider = ({ children }) => {
-  return (<StateContext.Provider value={{test:'test'}}>
-  {children}
-</StateContext.Provider >)}
+  const [activeMenu, setactiveMenu] = useState(true);
+  return (
+    <StateContext.Provider value={{ activeMenu,setactiveMenu }}>
+      {children}
+    </StateContext.Provider>
+  );
+};
+
+export const useStateContext = () => useContext(StateContext);

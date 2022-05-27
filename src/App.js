@@ -22,9 +22,12 @@ import {
   Editor,
   Line,
 } from "./Pages";
+import { useStateContext } from "./Context/ContextProvider";
+
+
 
 const App = () => {
-  const activeMenu = true;
+  const { activeMenu } = useStateContext();
   return (
     <div>
       <BrowserRouter>
@@ -72,9 +75,9 @@ const App = () => {
               <Route path="/kanban" element={<Kanban />}></Route>
               <Route path="/editor" element={<Editor />}></Route>
               <Route path="/calendar" element={<Calendar />}></Route>
-              <Route path="/colorpicker" element={<ColorPicker />}></Route>
+              <Route path="/color-picker" element={<ColorPicker />}></Route>
               {/* Charts */}
-              <Route path="/line" element={<Line/>}></Route>
+              <Route path="/line" element={<Line />}></Route>
               <Route path="/area" element={<Area />}></Route>
               <Route path="/bar" element={<Bar />}></Route>
               <Route path="/pie" element={<Pie />}></Route>
